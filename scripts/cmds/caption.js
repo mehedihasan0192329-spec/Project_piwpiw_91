@@ -21,7 +21,7 @@ module.exports = {
       try {
         const res = await axios.get(`${baseUrl}/api/caption/list`);
         const categories = res.data.categories.map(cat => `• ${cat}`).join("\n");
-        return message.reply(`>🎀 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐞𝐬:\n\n${categories}`);
+        return message.reply(`>🎀 𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐞𝐬:\n\n${categories}`);
       } catch {
         return message.reply("❌ Failed to fetch category list.");
       }
@@ -49,7 +49,7 @@ module.exports = {
       const res = await axios.get(`${baseUrl}/api/caption`, { params: { category, language } });
       return message.reply(`✅| Here’s your ${category} caption:\n\n${res.data.caption}`);
     } catch {
-      return message.reply("❌ Failed to fetch caption. Please check the category and language.");
+      return message.reply("❌ Piw Piw Chat Bot Failed to fetch caption. Please check the category and language.");
     }
   }
 };
