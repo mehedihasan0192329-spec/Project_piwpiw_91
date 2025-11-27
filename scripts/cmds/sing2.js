@@ -21,7 +21,7 @@ module.exports = {
     if (!g.length) return e.sendMessage("❌ Piw Piw Chat Bot Provide a song name or YouTube URL.", f.threadID, f.messageID);
 
     let h = g.join(" ");
-    const i = await e.sendMessage("🎵 Piw Piw Chat Bot Please wait...", f.threadID, null, f.messageID);
+    const i = await e.sendMessage("🎵 Piw Piw Chat Bot Please wait for song...", f.threadID, null, f.messageID);
 
     try {
       let j;
