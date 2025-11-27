@@ -26,7 +26,7 @@ module.exports = {
     const userData = await usersData.get(event.senderID);
 
     if (event.senderID !== author) {
-      return api.sendMessage("𝐓𝐡𝐢𝐬 𝐢𝐬 𝐧𝐨𝐭 𝐲𝐨𝐮𝐫 𝐟𝐥𝐚𝐠 𝐛𝐚𝐛𝐲 >🐸", event.threadID, event.messageID);
+      return api.sendMessage("𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐧𝐨𝐭 𝐲𝐨𝐮𝐫 𝐟𝐥𝐚𝐠 𝐝𝐚𝐫𝐥𝐢𝐧𝐠 >🐸", event.threadID, event.messageID);
     }
 
     const reply = event.body.toLowerCase();
