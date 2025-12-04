@@ -48,16 +48,16 @@ if (!bankData[user]) {
     switch (command) {
 case "deposit":
   if (isNaN(amount) || amount <= 0) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Bank 🏦]\n\n❏Please enter a valid amount to deposit 🔁•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Please enter a valid amount to deposit 🔁•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
 
   if (bankBalance >= 1e104) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You cannot deposit money when your bank balance is already at $1e104 ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You cannot deposit money when your bank balance is already at $1e104 ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (userMoney < amount) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You don't have the required amount to deposit ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You don't have the required amount to deposit ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   bankData[user].bank += amount;
@@ -66,7 +66,7 @@ case "deposit":
   });
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
-  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Successfully deposited $${amount} into your bank account ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Successfully deposited $${amount} into your bank account ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
 break;
 
 
@@ -74,15 +74,15 @@ case "withdraw":
   const balance = bankData[user].bank || 0;
 
   if (isNaN(amount) || amount <= 0) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Please enter the correct amount to withdraw 😪•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Please enter the correct amount to withdraw 😪•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (userMoney >= 1e104) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You cannot withdraw money when your balance is already at 1e104 😒•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You cannot withdraw money when your balance is already at 1e104 😒•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (amount > balance) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏The requested amount is greater than the available balance in your bank account 🗿•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏The requested amount is greater than the available balance in your bank account 🗿•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   // Continue with the withdrawal if the userMoney is not at 1e104
@@ -91,16 +91,16 @@ case "withdraw":
     money: userMoney + amount
   });
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Successfully withdrew $${amount} from your bank account ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Successfully withdrew $${amount} from your bank account ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
   break;
 
 
 case "balance":
   const formattedBankBalance = parseFloat(bankBalance);
   if (!isNaN(formattedBankBalance)) {
-    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Your bank balance is: $${formatNumberWithFullForm(formattedBankBalance)}\n\n╚════ஜ۩۞۩ஜ═══╝`);
+    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Your bank balance is: $${formatNumberWithFullForm(formattedBankBalance)}\n\n╚════ஜ۩۞۩ஜ═══╝`);
   } else {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Error: Your bank balance is not a valid number 🥲•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Error: Your bank balance is not a valid number 🥲•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
   break;
 
@@ -119,13 +119,13 @@ case "interest":
     const remainingHours = Math.floor(remainingTime / 3600);
     const remainingMinutes = Math.floor((remainingTime % 3600) / 60);
 
-    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You can claim interest again in ${remainingHours} hours and ${remainingMinutes} minutes 😉•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You can claim interest again in ${remainingHours} hours and ${remainingMinutes} minutes 😉•\n\n╚════ஜ۩۞۩ஜ═══╝`);
   }
 
   const interestEarned = bankData[user].bank * (interestRate / 970) * timeDiffInSeconds;
 
   if (bankData[user].bank <= 0) {
-        return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You don't have any money in your bank account to earn interest 💸🥱•\n\n╚════ஜ۩۞۩ஜ═══╝");
+        return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You don't have any money in your bank account to earn interest 💸🥱•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   bankData[user].lastInterestClaimed = currentTime;
@@ -134,32 +134,32 @@ case "interest":
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
 
-return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You have earned interest of $${formatNumberWithFullForm(interestEarned)}\n\nIt has been successfully added to your account balance ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You have earned interest of $${formatNumberWithFullForm(interestEarned)}\n\nIt has been successfully added to your account balance ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
 break;
 
 
 case "transfer":
   if (isNaN(amount) || amount <= 0) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Please enter a valid amount to transfer 🔁•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Please enter a valid amount to transfer 🔁•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (!recipientUID || !bankData[recipientUID]) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Recipient not found in the bank database. Please check the recipient's ID ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Recipient not found in the bank database. Please check the recipient's ID ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (recipientUID === user) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You cannot transfer money to yourself 😹•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You cannot transfer money to yourself 😹•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   const senderBankBalance = parseFloat(bankData[user].bank) || 0;
   const recipientBankBalance = parseFloat(bankData[recipientUID].bank) || 0;
 
   if (recipientBankBalance >= 1e104) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏The recipient's bank balance is already $1e104. You cannot transfer money to them 🗿•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏The recipient's bank balance is already $1e104. You cannot transfer money to them 🗿•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (amount > senderBankBalance) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You don't have enough money in your bank account for this transfer ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You don't have enough money in your bank account for this transfer ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   bankData[user].bank -= amount;
@@ -167,7 +167,7 @@ case "transfer":
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
 
-  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Successfully transferred $${amount} to the recipient with UID: ${recipientUID} ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Successfully transferred $${amount} to the recipient with UID: ${recipientUID} ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
 break;
 
 
@@ -184,7 +184,7 @@ case "richest":
     return `[${index + 1}. ${userName} - $${formattedBalance}]`;
   }))).join('\n');
 
-  return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Top 10 richest people according to their bank balance 👑🤴:\n" + output + "\n\n╚════ஜ۩۞۩ஜ═══╝");
+  return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Top 10 richest people according to their bank balance 👑🤴:\n" + output + "\n\n╚════ஜ۩۞۩ஜ═══╝");
 
 break;
 
@@ -195,15 +195,15 @@ case "loan":
   const loanPayed = bankData[user].loanPayed !== undefined ? bankData[user].loanPayed : true;
 
   if (!amount) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Please enter a valid loan amount ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Please enter a valid loan amount ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (amount > maxLoanAmount) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏The maximum loan amount is $100000000 ❗•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏The maximum loan amount is $100000000 ❗•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (!loanPayed && userLoan > 0) {
-    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You cannot take a new loan until you pay off your current loan.\n\nYour current loan to pay: $${userLoan} 😑•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You cannot take a new loan until you pay off your current loan.\n\nYour current loan to pay: $${userLoan} 😑•\n\n╚════ஜ۩۞۩ஜ═══╝`);
   }
 
   bankData[user].loan = userLoan + amount;
@@ -213,7 +213,7 @@ case "loan":
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
 
-  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You have successfully taken a loan of $${amount}. Please note that loans must be repaid within a certain period 😉•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You have successfully taken a loan of $${amount}. Please note that loans must be repaid within a certain period 😉•\n\n╚════ஜ۩۞۩ஜ═══╝`);
 
 break;
 
@@ -221,19 +221,19 @@ case "payloan":
   const loanBalance = bankData[user].loan || 0;
 
   if (isNaN(amount) || amount <= 0) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Please enter a valid amount to repay your loan ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Please enter a valid amount to repay your loan ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (loanBalance <= 0) {
-    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You don't have any pending loan payments•\n\n✧⁺⸜(●˙▾˙●)⸝⁺✧ʸᵃʸ\n\n╚════ஜ۩۞۩ஜ═══╝");
+    return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You don't have any pending loan payments•\n\n✧⁺⸜(●˙▾˙●)⸝⁺✧ʸᵃʸ\n\n╚════ஜ۩۞۩ஜ═══╝");
   }
 
   if (amount > loanBalance) {
-    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏The amount required to pay off the loan is greater than your due amount. Please pay the exact amount 😊•\nYour total loan: $${loanBalance}\n\n╚════ஜ۩۞۩ஜ═══╝`);
+    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏The amount required to pay off the loan is greater than your due amount. Please pay the exact amount 😊•\nYour total loan: $${loanBalance}\n\n╚════ஜ۩۞۩ஜ═══╝`);
   }
 
   if (amount > userMoney) {
-    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏You do not have $${amount} in your balance to repay the loan 😢•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+    return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏You do not have $${amount} in your balance to repay the loan 😢•\n\n╚════ஜ۩۞۩ஜ═══╝`);
   }
 
   bankData[user].loan = loanBalance - amount;
@@ -249,12 +249,12 @@ case "payloan":
 fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 
 
-  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Successfully repaid $${amount} towards your loan. Your current loan to pay: $${bankData[user].loan} ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
+  return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Successfully repaid $${amount} towards your loan. Your current loan to pay: $${bankData[user].loan} ✅•\n\n╚════ஜ۩۞۩ஜ═══╝`);
 
 break;
 
 default:
-  return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Chat Bot Bank 🏦]\n\n❏Please use one of the following valid commands: Deposit, Withdraw, Balance, Interest, Transfer, Richest, Loan, PayLoan\n\n╚════ஜ۩۞۩ஜ═══╝");
+  return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🏦 Piw Piw Bank 🏦]\n\n❏Please use one of the following valid commands: Deposit, Withdraw, Balance, Interest, Transfer, Richest, Loan, PayLoan\n\n╚════ஜ۩۞۩ஜ═══╝");
 }
   }
 };
