@@ -32,15 +32,15 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = "𝗣𝗶𝘄 𝗣𝗶𝘄 𝗖𝗵𝗮𝘁 𝗕𝗼𝘁";
-    const ownerName = "𝗚𝗢𝗝𝗢 𝗢𝗥𝗨𝗣𝗘 𝗣𝗜𝗪 𝗣𝗜𝗪";
-    const moderatedBy = "𝗚𝗢𝗝𝗢 𝗫 𝗭𝗘𝗡𝗜𝗧𝗦𝗨";
+    const botName = "নানা ভাই ";
+    const ownerName = "𝐌𝐞𝐡𝐞𝐝𝐢 𝐇𝐚𝐬𝐚𝐧";
+    const moderatedBy = "𝗚𝗢𝗝𝗢 𝗫 𝐇𝐚𝐬𝐚𝐧";
     const religion = "𝗜𝗦𝗟𝗔𝗠";
-    const botStatus = "𝗦𝗜𝗡𝗚𝗟𝗘";
-    const address = "𝗗𝗛𝗔𝗞𝗔 , 𝗕𝗔𝗡𝗚𝗟𝗔𝗗𝗘𝗦𝗛";
+    const botStatus = "𝐒𝐞𝐜𝐫𝐞𝐭";
+    const address = "𝐒𝐲𝐥𝐡𝐞𝐭 , 𝗕𝗔𝗡𝗚𝗟𝗔𝗗𝗘𝗦𝗛";
     const userClass = "𝗦𝗘𝗖𝗥𝗘𝗧";
-    const facebook = "https://www.facebook.com/100051168244116";
-    const tiktok = "https://www.tiktok.com/𝗻𝗮𝗶.";
+    const facebook = "https://www.facebook.com/profile.php?id=61584451283974";
+    const tiktok = "𝐃𝐢𝐭𝐚𝐦 𝐧𝐚.";
 
     const now = moment().tz('Asia/Dhaka');
     const localTime = now.format('hh:mm:ss A');
