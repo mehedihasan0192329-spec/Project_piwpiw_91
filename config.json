@@ -17,8 +17,8 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100051168244116",
-    "100031770681053",
+    "61584451283974",
+    "61584451283974",
     ""
   ],
   "whiteListMode": {
@@ -26,8 +26,8 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "🌈𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭🪷",
-  "prefix": "+",
+  "nickNameBot": "🌈𝐏𝐢𝐰 𝐏𝐢𝐰 Hasab 🪷",
+  "prefix": "!",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
