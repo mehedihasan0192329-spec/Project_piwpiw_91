@@ -15,7 +15,7 @@ const mahmud = [
   "হাসান",
   "hasan",
   "gojo orupe piw piw",
-  "piw piw chat bot"
+  "nana vai"
 ];
 
 
