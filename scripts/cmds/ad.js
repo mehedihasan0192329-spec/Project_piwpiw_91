@@ -10,8 +10,7 @@ module.exports = {
     countDown: 10,
     role: 0,
     shortDescription: {
-      en: "Generate an ad style image from profile picture"
-    },
+      en: "Generate an ad style image from profile picture"     },
     description: {
       en: "Creates an ad style meme from your or mentioned user's profile picture"
     },
